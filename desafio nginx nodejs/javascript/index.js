@@ -3,8 +3,6 @@ const { Repository } = require('./repository');
 const app = express();
 
 app.get('/', async (_, res) => {
-  console.log('bucetaaa')
-
   const selectSql = `SELECT * FROM people`;
   const people = await Repository.query(selectSql);
 
